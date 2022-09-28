@@ -15,10 +15,10 @@ import java.util.Map;
 
 public class JoinEvent extends ListenerAdapter {
     private final Logger LOGGER = LoggerFactory.getLogger(JoinEvent.class);
-    private Map<Invite, Integer> invites = new HashMap<>();
+    private final Map<Invite, Integer> invites = new HashMap<>();
 
     public JoinEvent() {
-        Guild g = SellerBot.getJda.getGuildById("");
+        Guild g = SellerBot.getJda.getGuildById(1024742260232945815L);
         for (Invite invite : g.retrieveInvites().complete()) {
             invites.put(invite, invite.getUses());
         }
@@ -26,7 +26,7 @@ public class JoinEvent extends ListenerAdapter {
 
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent e) {
-        Guild g = e.getJDA().getGuildById("");
+        Guild g = e.getJDA().getGuildById(1024742260232945815L);
         for (Invite invite : invites.keySet()) {
             if (invite.getUses() > invites.get(invite)) {
                 User inviter = invite.getInviter();

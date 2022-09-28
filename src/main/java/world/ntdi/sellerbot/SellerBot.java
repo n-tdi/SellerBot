@@ -19,7 +19,7 @@ public class SellerBot {
     public static JDA getJda;
     public static void main(String[] args) throws LoginException, InterruptedException {
         CommandClientBuilder builder = new CommandClientBuilder();
-//        builder.forceGuildOnly("1011800940061401090");
+        builder.forceGuildOnly(1024742260232945815L);
 //        builder.setServerInvite("https://discord.gg/Ahqeb8ahHn");
         builder.setOwnerId("811580599068262421");
         builder.setCoOwnerIds(348587937144897537L);
