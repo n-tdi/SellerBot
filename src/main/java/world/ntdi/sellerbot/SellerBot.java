@@ -35,7 +35,7 @@ public class SellerBot {
                 .disableCache(CacheFlag.VOICE_STATE)
                 .setBulkDeleteSplittingEnabled(false)
                 .setChunkingFilter(ChunkingFilter.ALL)
-                .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_MESSAGES)
+                .enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_PRESENCES)
                 .setMemberCachePolicy(MemberCachePolicy.ALL)
                 .addEventListeners(
                         new JoinEvent(),
